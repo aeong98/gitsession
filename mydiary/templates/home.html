@@ -1,0 +1,10 @@
+<h1>DIARY</h1>
+
+<a href="{% url 'new' %}">new diary</a><br><br>
+
+
+{% for post in posts_list %}
+    <a href="{% url 'detail' index=post.pk %}">{{post.title}} </a>
+<br>
+<hr>
+{% endfor %}
